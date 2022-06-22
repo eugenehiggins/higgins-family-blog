@@ -1,0 +1,6 @@
+SQL_ENGINE=django.db.backends.postgresql
+SQL_DATABASE=higgins_family_blog
+SQL_USER=higgins_family_blog
+SQL_PASSWORD=higgins_family_blog
+SQL_HOST=db
+SQL_PORT=5432
