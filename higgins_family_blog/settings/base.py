@@ -26,9 +26,11 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 INSTALLED_APPS = [
     'home',
     'search',
+    'blog',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
+    'wagtail.contrib.postgres_search',
     'wagtail.embeds',
     'wagtail.sites',
     'wagtail.users',
@@ -41,6 +43,8 @@ INSTALLED_APPS = [
 
     'modelcluster',
     'taggit',
+    'django_extensions',
+    'sass_processor',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -165,7 +169,7 @@ WAGTAIL_SITE_NAME = "higgins_family_blog"
 # https://docs.wagtail.io/en/stable/topics/search/backends.html
 WAGTAILSEARCH_BACKENDS = {
     'default': {
-        'BACKEND': 'wagtail.search.backends.database',
+        'BACKEND': 'wagtail.contrib.postgres_search.backend',
     }
 }
 
